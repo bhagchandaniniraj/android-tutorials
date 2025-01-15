@@ -78,9 +78,14 @@ Screenshots
 
 Here are some screenshots of the application:
 
-*   **Snapshot 1**
-    
-*   **Snapshot 2**
+- **Snapshot 1**  
+![Snapshot-1](https://github.com/bhagchandaniniraj/android-tutorials/raw/main/CheckBoxDemo/snapshots/Snapshot-1.png)
+
+- **Snapshot 2**  
+![Snapshot-2](https://github.com/bhagchandaniniraj/android-tutorials/raw/main/CheckBoxDemo/snapshots/Snapshot-2.jpg)
+
+
+
     
 
 
