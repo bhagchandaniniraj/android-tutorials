@@ -84,10 +84,12 @@ Here are some screenshots of the application:
 - **Snapshot 2**  
 ![Snapshot-2](https://github.com/bhagchandaniniraj/android-tutorials/raw/main/CheckBoxDemo/snapshots/Snapshot-2.jpg)
 
+ 
+ ## Author
 
-
-    
-
+- **Name**: Niraj Bhagchandani
+- **GitHub**: [https://github.com/bhagchandaniniraj/android-tutorials](https://github.com/bhagchandaniniraj/android-tutorials)
+- **Contact**: [bhagchandani.niraj@gmail.com](mailto:bhagchandani.niraj@gmail.com)
 
 -------
 
