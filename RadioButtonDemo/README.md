@@ -172,11 +172,12 @@ If you have ideas for new features, enhancements, or bug fixes, feel free to:
 
 ---
 
-## Contact
+## Author
 
-If you have any questions or suggestions, feel free to open an issue or contact me directly via [GitHub Issues](https://github.com/bhagchandaniniraj/android-tutorials.git).
+- **Name**: Niraj Bhagchandani
+- **GitHub**: [https://github.com/bhagchandaniniraj/android-tutorials](https://github.com/bhagchandaniniraj/android-tutorials)
+- **Contact**: [bhagchandani.niraj@gmail.com](mailto:bhagchandani.niraj@gmail.com)
 
----
 
 ## Conclusion
 
