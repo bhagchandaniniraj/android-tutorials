@@ -115,11 +115,12 @@ ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -
 
 Feel free to fork this repository, make changes, and submit a pull request! 🛠️
 
-## Contact
+## Author
 
-For questions or issues, feel free to open an issue on [GitHub](https://github.com/bhagchandaniniraj/android-tutorials.git).
+- **Name**: Niraj Bhagchandani
+- **GitHub**: [https://github.com/bhagchandaniniraj/android-tutorials](https://github.com/bhagchandaniniraj/android-tutorials)
+- **Contact**: [bhagchandani.niraj@gmail.com](mailto:bhagchandani.niraj@gmail.com)
 
----
 
 ## Conclusion
 
