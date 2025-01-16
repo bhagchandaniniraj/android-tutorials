@@ -142,12 +142,12 @@ Here’s how you can contribute:
 3. Create a pull request with a description of your changes.
 
 
+## Author
 
-## Contact
+- **Name**: Niraj Bhagchandani
+- **GitHub**: [https://github.com/bhagchandaniniraj/android-tutorials](https://github.com/bhagchandaniniraj/android-tutorials)
+- **Contact**: [bhagchandani.niraj@gmail.com](mailto:bhagchandani.niraj@gmail.com)
 
-For questions or feedback, feel free to reach out or open an issue on the [GitHub Repository](https://github.com/bhagchandaniniraj/android-tutorials.git).
-
----
 
 ## Conclusion
 
