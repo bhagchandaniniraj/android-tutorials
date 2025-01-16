@@ -17,14 +17,10 @@ android-tutorials/
 │   └── Intents_And_Actions/
 │
 ├── Intermediate/
-│   ├── Networking/
-│   ├── Database_Integration/
-│   └── Background_Tasks/
-│
-└── Advanced/
-    ├── Architecture_Components/
-    ├── Jetpack_Libraries/
-    └── Custom_Views/
+  ├── Networking/
+    ├── Database_Integration/
+    └── Background_Tasks/
+
 ```
 
 Each folder contains relevant tutorials and examples to guide you from basic concepts to more advanced Android development topics.
