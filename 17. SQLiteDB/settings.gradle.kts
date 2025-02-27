@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SQLiteDB"
+rootProject.name = "SQLDemo"
 include(":app")
- 

@@ -1,4 +1,4 @@
-package com.example.sqlitedb;
+package com.example.sqldemo;
 
 import org.junit.Test;
 
