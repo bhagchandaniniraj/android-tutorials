@@ -27,6 +27,19 @@ public class DBDemo extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("SELECT * FROM EMP", null);
     }
+    public int deleteData(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete("EMP","id = ?", new String[]{id});
+    }
+    public int updateData(String id,String nm, String sn, Integer salary ){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("ID", id);
+        cv.put("NAME", nm);
+        cv.put("SURNAME", sn);
+        cv.put("SALARY", salary);
+        return db.update("EMP", cv," id = ?", new String[] {id});
+    }
     public boolean addData(String nm, String sn, Integer salary){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();

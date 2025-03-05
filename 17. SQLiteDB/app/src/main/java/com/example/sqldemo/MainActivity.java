@@ -17,8 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 import kotlin.time.ExperimentalTime;
 
 public class MainActivity extends AppCompatActivity {
-    private static EditText nm, sn, sal;
-    private static Button addBt, showBt;
+    private static EditText id,nm, sn, sal;
+    private static Button addBt, showBt, updateBt, deleteBt;
     private static DBDemo obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,35 +30,48 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        obj = new DBDemo(this,"employees.db", null, 1);
-        operationsInSQL();
-    }
-    public void operationsInSQL(){
+        id = (EditText) findViewById(R.id.et_id);
         nm = (EditText) findViewById(R.id.et_nm);
         sn = (EditText) findViewById(R.id.et_sn);
         sal =(EditText) findViewById(R.id.et_sal);
         addBt = (Button) findViewById(R.id.add_btn);
         showBt = (Button) findViewById(R.id.show_bt);
-        showBt.setOnClickListener(new View.OnClickListener() {
+        updateBt = (Button) findViewById(R.id.btn_upd);
+        deleteBt = (Button) findViewById(R.id.btn_dlt);
+
+        obj = new DBDemo(this,"employees.db", null, 1);
+        fetchData();
+        addData();
+        updateData();
+        dltData();
+    }
+    public void dltData(){
+        deleteBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor res = obj.fetchData();
-                if(res.getCount() == 0 ){
-                    showMessage("EMP Table", "No Data Found!!!");
-                    Toast.makeText(MainActivity.this, "No Data Found", Toast.LENGTH_LONG).show();
+                int isDeleted = obj.deleteData(id.getText().toString());
+                if(isDeleted > 0 ){
+                    Toast.makeText(MainActivity.this, "Deleted Successfully Rows: " + isDeleted, Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "No Rows Deleted", Toast.LENGTH_LONG).show();
                 }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-                    buffer.append("ID: "+ res.getString(0)+"\n");
-                    buffer.append("ID: "+ res.getString(1)+"\n");
-                    buffer.append("ID: "+ res.getString(2)+"\n");
-                    buffer.append("ID: "+ res.getString(3)+"\n");
-                    buffer.append("===================================\n");
-                }
-                showMessage("Show Data", buffer.toString());
             }
         });
-
+    }
+    public void updateData(){
+        updateBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int isUpdated = obj.updateData(id.getText().toString(), nm.getText().toString(),sn.getText().toString(), Integer.parseInt(sal.getText().toString()));
+                if(isUpdated > 0 ){
+                    Toast.makeText(MainActivity.this, "Updated Successfully Rows: " + isUpdated, Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "No Rows Updated", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+    public void addData(){
         addBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +84,27 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(MainActivity.this, "Something went wrong...", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+    }
+    public void fetchData(){
+        showBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor res = obj.fetchData();
+                if(res.getCount() == 0 ){
+                    showMessage("EMP Table", "No Data Found!!!");
+                    Toast.makeText(MainActivity.this, "No Data Found", Toast.LENGTH_LONG).show();
+                }
+                StringBuffer buffer = new StringBuffer();
+                while(res.moveToNext()){
+                    buffer.append("ID: "+ res.getString(0)+"\n");
+                    buffer.append("Name: "+ res.getString(1)+"\n");
+                    buffer.append("Surname: "+ res.getString(2)+"\n");
+                    buffer.append("Salary: "+ res.getString(3)+"\n");
+                    buffer.append("===================================\n");
+                }
+                showMessage("Show Data", buffer.toString());
             }
         });
     }
